@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Modelagem.service;
-namespace Modelagem.controller
+
+namespace PIM.model
 {
-    public class LoginController
+    enum StatusParaVenda
     {
 
-        private LoginService service;
-
+        PENDENTE = 1,
+        CANCELADO = 2,
+        CONCLUIDO = 3
 
     }
 }

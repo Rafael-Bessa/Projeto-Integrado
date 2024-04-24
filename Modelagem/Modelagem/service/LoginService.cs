@@ -1,4 +1,5 @@
 ﻿using Modelagem.db;
+using Modelagem.model;
 using Modelagem.Model;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,9 @@ namespace Modelagem.service
 {
     public class LoginService
     {
-
         private UsuarioDAO usuariodao = new UsuarioDAO();
-        public bool existeUsuarioNoBanco(Usuario usuario)
+
+        public bool ValidaAcessoUsuario(Usuario usuario)
         {
             var usuarioBuscado = usuariodao.getUsuarioByLogin(usuario.Login);
 
@@ -23,10 +24,11 @@ namespace Modelagem.service
             }
             return false;
         }
-        
 
-
-
+        public NivelAcesso nivelAcessoUsuarioBuscado(Usuario usuario)
+        {
+            return usuariodao.getNivelAcessoUsuario(usuario.Login);
+        }
 
     }
 }

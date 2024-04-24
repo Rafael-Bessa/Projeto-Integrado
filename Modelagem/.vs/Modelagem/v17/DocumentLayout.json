@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\rfzst\\source\\repos\\Modelagem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7D0021BE-1704-48A9-9D55-72C0555769ED}|Modelagem\\Modelagem.csproj|c:\\users\\rfzst\\source\\repos\\modelagem\\modelagem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0021BE-1704-48A9-9D55-72C0555769ED}|Modelagem\\Modelagem.csproj|solutionrelative:modelagem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0021BE-1704-48A9-9D55-72C0555769ED}|Modelagem\\Modelagem.csproj|c:\\users\\rfzst\\source\\repos\\modelagem\\modelagem\\db\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0021BE-1704-48A9-9D55-72C0555769ED}|Modelagem\\Modelagem.csproj|solutionrelative:modelagem\\db\\usuariodao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0021BE-1704-48A9-9D55-72C0555769ED}|Modelagem\\Modelagem.csproj|c:\\users\\rfzst\\source\\repos\\modelagem\\modelagem\\model\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0021BE-1704-48A9-9D55-72C0555769ED}|Modelagem\\Modelagem.csproj|solutionrelative:modelagem\\model\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0021BE-1704-48A9-9D55-72C0555769ED}|Modelagem\\Modelagem.csproj|c:\\users\\rfzst\\source\\repos\\modelagem\\modelagem\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0021BE-1704-48A9-9D55-72C0555769ED}|Modelagem\\Modelagem.csproj|solutionrelative:modelagem\\service\\loginservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7D0021BE-1704-48A9-9D55-72C0555769ED}|Modelagem\\Modelagem.csproj|c:\\users\\rfzst\\source\\repos\\modelagem\\modelagem\\db\\criaconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7D0021BE-1704-48A9-9D55-72C0555769ED}|Modelagem\\Modelagem.csproj|solutionrelative:modelagem\\db\\criaconexao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{7D0021BE-1704-48A9-9D55-72C0555769ED}|Modelagem\\PIM.csproj|c:\\users\\rfzst\\source\\repos\\modelagem\\modelagem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7D0021BE-1704-48A9-9D55-72C0555769ED}|Modelagem\\PIM.csproj|solutionrelative:modelagem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,59 +14,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 0,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Usuario.cs",
-              "DocumentMoniker": "C:\\Users\\rfzst\\source\\repos\\Modelagem\\Modelagem\\model\\Usuario.cs",
-              "RelativeDocumentMoniker": "Modelagem\\model\\Usuario.cs",
-              "ToolTip": "C:\\Users\\rfzst\\source\\repos\\Modelagem\\Modelagem\\model\\Usuario.cs",
-              "RelativeToolTip": "Modelagem\\model\\Usuario.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T02:47:02.364Z",
-              "IsPinned": true,
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UsuarioDAO.cs",
-              "DocumentMoniker": "C:\\Users\\rfzst\\source\\repos\\Modelagem\\Modelagem\\db\\UsuarioDAO.cs",
-              "RelativeDocumentMoniker": "Modelagem\\db\\UsuarioDAO.cs",
-              "ToolTip": "C:\\Users\\rfzst\\source\\repos\\Modelagem\\Modelagem\\db\\UsuarioDAO.cs",
-              "RelativeToolTip": "Modelagem\\db\\UsuarioDAO.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-05T02:33:55.729Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "CriaConexao.cs",
-              "DocumentMoniker": "C:\\Users\\rfzst\\source\\repos\\Modelagem\\Modelagem\\db\\CriaConexao.cs",
-              "RelativeDocumentMoniker": "Modelagem\\db\\CriaConexao.cs",
-              "ToolTip": "C:\\Users\\rfzst\\source\\repos\\Modelagem\\Modelagem\\db\\CriaConexao.cs",
-              "RelativeToolTip": "Modelagem\\db\\CriaConexao.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCIAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T02:57:24.574Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LoginService.cs",
-              "DocumentMoniker": "C:\\Users\\rfzst\\source\\repos\\Modelagem\\Modelagem\\service\\LoginService.cs",
-              "RelativeDocumentMoniker": "Modelagem\\service\\LoginService.cs",
-              "ToolTip": "C:\\Users\\rfzst\\source\\repos\\Modelagem\\Modelagem\\service\\LoginService.cs",
-              "RelativeToolTip": "Modelagem\\service\\LoginService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAuAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T02:56:19.165Z"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -91,9 +24,9 @@
               "RelativeDocumentMoniker": "Modelagem\\Program.cs",
               "ToolTip": "C:\\Users\\rfzst\\source\\repos\\Modelagem\\Modelagem\\Program.cs",
               "RelativeToolTip": "Modelagem\\Program.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAsAAAAVAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA0AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-04T02:46:07.278Z",
+              "WhenOpened": "2024-04-19T14:15:30.757Z",
               "EditorCaption": ""
             }
           ]

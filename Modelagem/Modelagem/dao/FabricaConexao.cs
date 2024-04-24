@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -8,15 +9,16 @@ using System.Threading.Tasks;
 
 namespace Modelagem.db
 {
-    public abstract class CriaConexao
+    public abstract class FabricaConexao
     {
 
-        private static readonly string url = "Data Source = localhost; Initial Catalog = TESTE; Integrated Security = False; User ID = sa; Password=123456";
+        /*
+
+        private static string url = ConfigurationManager.ConnectionStrings["StringConexao"].ConnectionString;
         private SqlConnection conexao = new SqlConnection(url);
 
         public SqlConnection getConexao()
         {
-
             try
             {
                 SqlConnection conexao = new SqlConnection(url);
@@ -27,15 +29,28 @@ namespace Modelagem.db
             {
                 throw new Exception("Algo deu errado na conexão com o banco de dados", e);
             }
-            catch (Exception e)
+        }
+
+        */
+
+
+        private static string url = ConfigurationManager.ConnectionStrings["StringConexao"].ConnectionString;
+
+        public SqlConnection getConexao()
+        {
+            try
             {
-                throw new Exception("Erro inesperado ao obter conexão", e);
+                SqlConnection conexao = new SqlConnection(url);
+                conexao.Open();
+                return conexao;
             }
-            finally
+            catch (SqlException e)
             {
-                conexao.Close();
+                throw new Exception("Algo deu errado na conexão com o banco de dados", e);
             }
         }
+
+
 
 
     }

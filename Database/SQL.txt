@@ -1,0 +1,120 @@
+CREATE DATABASE PIM;
+
+
+USE PIM;
+
+
+CREATE TABLE usuario (
+    id_usuario INT IDENTITY(1,1) PRIMARY KEY,
+    login VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(MAX) NOT NULL,
+    nome VARCHAR(20) NOT NULL ,
+    sobrenome VARCHAR(40) NOT NULL,
+    email VARCHAR(50) NOT NULL UNIQUE,
+    cpf CHAR(14) NOT NULL UNIQUE,
+	telefone VARCHAR(15) NOT NULL UNIQUE,
+    nivel_acesso CHAR(1) NOT NULL,
+	salario DECIMAL(8, 2) DEFAULT NULL,
+	status BIT NOT NULL DEFAULT 1
+);
+
+CREATE TABLE cliente
+(
+    id_cliente INT PRIMARY KEY,
+    FOREIGN KEY (id_cliente) REFERENCES usuario(id_usuario) ON DELETE CASCADE
+);
+
+CREATE TABLE endereco_usuario (
+    id_endereco_usuario INT IDENTITY(1,1) PRIMARY KEY,
+    logradouro VARCHAR(100) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    complemento VARCHAR(20) DEFAULT NULL,
+    bairro VARCHAR(50) NOT NULL,
+    cidade VARCHAR(50) NOT NULL,
+    cep CHAR(9) NOT NULL,
+	usuario_id INT NOT NULL,
+    FOREIGN KEY (usuario_id) REFERENCES usuario(id_usuario) ON DELETE CASCADE
+);
+
+CREATE TABLE fornecedor (
+    id_fornecedor INT IDENTITY(1,1) PRIMARY KEY,
+    cnpj CHAR(18) UNIQUE,
+    razao_social VARCHAR(100) UNIQUE,
+    email VARCHAR(50) UNIQUE,
+    telefone VARCHAR(15) UNIQUE,
+    nome_representante VARCHAR(50),
+	status BIT NOT NULL DEFAULT 1
+);
+
+CREATE TABLE endereco_fornecedor (
+    id_endereco_fornecedor INT IDENTITY(1,1) PRIMARY KEY,
+    logradouro VARCHAR(100) NOT NULL,
+    numero VARCHAR(10) NOT NULL,
+    complemento VARCHAR(20) DEFAULT NULL,
+    bairro VARCHAR(50) NOT NULL,
+    cidade VARCHAR(50) NOT NULL,
+    cep CHAR(9) NOT NULL,
+	fornecedor_id INT NOT NULL,
+    FOREIGN KEY (fornecedor_id) REFERENCES fornecedor(id_fornecedor) ON DELETE CASCADE
+);
+
+CREATE TABLE produto_fornecedor
+(
+    id_produto_fornecedor INT IDENTITY(1,1) PRIMARY KEY,
+    nome VARCHAR(30) NOT NULL UNIQUE,
+    preco DECIMAL(8, 2) NOT NULL,
+    quantidade_estoque INT NOT NULL,
+    descricao VARCHAR(MAX),
+    data_validade DATETIME,
+	status BIT NOT NULL DEFAULT 1,
+	id_fornecedor INT NOT NULL,
+    FOREIGN KEY (id_fornecedor) REFERENCES fornecedor(id_fornecedor) ON DELETE CASCADE
+);
+
+CREATE TABLE produto
+(
+    id_produto INT IDENTITY(1,1) PRIMARY KEY,
+    nome VARCHAR(30) NOT NULL UNIQUE,
+    preco DECIMAL(8, 2) NOT NULL,
+    quantidade_estoque INT NOT NULL,
+    descricao VARCHAR(MAX),
+    data_validade DATETIME,
+	categoria CHAR(1),
+	status BIT NOT NULL DEFAULT 1
+);
+
+CREATE TABLE pedido_cliente
+(
+    id_pedido INT IDENTITY(1,1) PRIMARY KEY,
+    id_cliente_fk INT NOT NULL,
+    id_produto_fk INT NOT NULL,
+    quantidade INT NOT NULL,
+    data_pedido DATETIME NOT NULL,
+    status_pedido CHAR(1) NOT NULL,
+    FOREIGN KEY (id_cliente_fk) REFERENCES cliente(id_cliente) ON DELETE CASCADE,
+    FOREIGN KEY (id_produto_fk) REFERENCES produto(id_produto) ON DELETE CASCADE
+);
+
+
+CREATE TABLE compra (
+    id_compra INT IDENTITY(1,1) PRIMARY KEY,
+    data_compra DATETIME NOT NULL,
+    valor_total DECIMAL(8, 2) NOT NULL ,
+    nota_fiscal VARCHAR(255) NOT NULL UNIQUE,
+    forma_pagamento INT NOT NULL
+);
+
+CREATE TABLE compra_pedido (
+    id_compra_pedido INT IDENTITY(1,1) PRIMARY KEY,
+    id_produtoFornecedor_fk INT NOT NULL,
+    id_compra_fk INT NOT NULL,
+    quantidade_produto_fornecedor INT NOT NULL,
+    valor_total_pedido DECIMAL(8, 2) NOT NULL,
+    status_pedido CHAR(1) NOT NULL,
+    FOREIGN KEY (id_produtoFornecedor_fk) REFERENCES produto_fornecedor(id_produto_fornecedor),
+    FOREIGN KEY (id_compra_fk) REFERENCES compra(id_compra)
+);
+
+INSERT INTO usuario VALUES ('adminrafaelbessa', 'a665a45920422f9d417e4867efdc4fb8a04a1f3fff1fa07e998e86f7f7a27ae3','Rafael', 'Bessa','admin@fazendaurbana.com.br', '123.456.789-00', '1199999-5555', '1', 3560.30, 1);
+
+INSERT INTO endereco_usuario VALUES ('Rua do admin', '123', 'Casa', 'Tatuapé', 'São Paulo', '01234-567', 1);

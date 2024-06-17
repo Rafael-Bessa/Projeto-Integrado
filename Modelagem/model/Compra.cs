@@ -13,7 +13,6 @@ namespace PIM.model
         private int id_compra;
         private DateTime dataCompra;
         private decimal valorTotal;
-        private string notaFiscal; //NF compra inteira
         private FormaPagamento formaPagamento;
         
         public List<ProdutoFornecedor> fazerCompra()

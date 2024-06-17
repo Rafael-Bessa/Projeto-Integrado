@@ -8,10 +8,9 @@ namespace PIM.model
 {
     enum FormaPagamento
     {
-
-        CartaoCredito = 1,
-        CartaoDebito = 2,
-        Dinheiro = 3,
+        CARTAO_CREDITO = 1,
+        CARTAO_DEBITO = 2,
+        BOLETO = 3,
         PIX = 4
     }
 }

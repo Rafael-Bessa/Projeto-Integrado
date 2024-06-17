@@ -21,6 +21,7 @@ namespace Modelagem.Model
         private NivelAcesso nivelAcesso;
         private decimal? salario;
         private Status status;
+        private int endereco_id_fk;
 
         public Usuario() { }
 
@@ -37,7 +38,7 @@ namespace Modelagem.Model
             this.NivelAcesso = nivelAcesso;
         }
 
-        public Usuario(string login, string senha, string nome, string sobrenome, string email, string cpf, string telefone, NivelAcesso nivelAcesso)
+        public Usuario(string login, string senha, string nome, string sobrenome, string email, string cpf, string telefone, NivelAcesso nivelAcesso, decimal? salario, Status status, int endereco_id_fk)
         {
             this.login = login;
             this.senha = senha;
@@ -47,9 +48,12 @@ namespace Modelagem.Model
             this.cpf = cpf;
             this.telefone = telefone;
             this.nivelAcesso = nivelAcesso;
+            this.salario = salario;
+            this.status = status;
+            this.Endereco_id_fk = endereco_id_fk;
         }
 
-        public Usuario(int usuario_id, string login, string senha, string nome, string sobrenome, string email, string cpf, string telefone, NivelAcesso nivelAcesso, decimal? salario, Status status)
+        public Usuario(int usuario_id, string login, string senha, string nome, string sobrenome, string email, string cpf, string telefone, NivelAcesso nivelAcesso, decimal? salario, Status status, int endereco_id_fk)
         {
             this.usuario_id = usuario_id;
             this.login = login;
@@ -62,6 +66,7 @@ namespace Modelagem.Model
             this.nivelAcesso = nivelAcesso;
             this.salario = salario;
             this.status = status;
+            this.Endereco_id_fk = endereco_id_fk;
         }
 
         public int Usuario_id { get => usuario_id; set => usuario_id = value; }
@@ -75,6 +80,7 @@ namespace Modelagem.Model
         public NivelAcesso NivelAcesso { get => nivelAcesso; set => nivelAcesso = value; }  
         public Status Status { get => status; set => status = value; }
         public decimal? Salario { get => salario; set => salario = value; }
+        public int Endereco_id_fk { get => endereco_id_fk; set => endereco_id_fk = value; }
 
         public override bool Equals(object obj)
         {
@@ -97,7 +103,7 @@ namespace Modelagem.Model
 
         public override string ToString()
         {
-            return $"Usuario ID: {Usuario_id}, Login: {Login}, Nome: {Nome} {Sobrenome}, Email: {Email}, Telefone: {Telefone}, Status: {Status}";
+            return $"Usuario ID: {Usuario_id}, Login: {Login}, Nome: {Nome} {Sobrenome}, Email: {Email}, Telefone: {Telefone}, Status: {Status}, Acesso: {NivelAcesso}";
         }
 
     }

@@ -26,7 +26,7 @@ namespace PIM.dao
                     {
                         try
                         {
-                            using (SqlCommand comando = new SqlCommand("INSERT INTO cliente (id_cliente) VALUES (@id_cliente);", conexao, transacao))
+                            using (SqlCommand comando = new SqlCommand("INSERT INTO CLIENTE (USU_INT_ID) VALUES (@id_cliente);", conexao, transacao))
                             {
                                 comando.Parameters.AddWithValue("@id_cliente", idUsuario);
 

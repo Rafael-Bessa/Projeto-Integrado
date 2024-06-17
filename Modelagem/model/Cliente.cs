@@ -11,7 +11,9 @@ namespace PIM.model
     {
 
         private int id_cliente;
+        private int id_usuario_fk_uk;
 
         public int Id_cliente { get => id_cliente; set => id_cliente = value; }
+        public int Id_usuario_fk_uk { get => id_usuario_fk_uk; set => id_usuario_fk_uk = value; }
     }
 }

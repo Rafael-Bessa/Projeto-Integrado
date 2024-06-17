@@ -14,6 +14,7 @@ namespace PIM.model
         private int id_produto_fk;
         private int quantidade_pedido;
         private DateTime data_pedido;
+        private FormaPagamento formaPagamento;
         private StatusParaVenda statusParaVenda;
 
 

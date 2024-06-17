@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 
 namespace Modelagem.model
 {
-    //O cliente vai poder interagir com o sistema através de páginas web/mobile
     public enum NivelAcesso
     {
         ADMINISTRADOR = 1,    
